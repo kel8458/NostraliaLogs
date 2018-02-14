@@ -1,2 +1,3 @@
 # NostraliaLogs
-Combat, raid, and other logs from Nostralia
+
+a [Sails](http://sailsjs.org) application
