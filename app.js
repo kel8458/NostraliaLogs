@@ -28,19 +28,15 @@ app.use(cookieParser());
 app.use(sassMiddleware({
 	src: path.join(__dirname, 'public'),
 	dest: path.join(__dirname, 'public'),
-  debug: true,
+	debug: true,
 	indentedSyntax: true, // true = .sass and false = .scss
 	sourceMap: true
 }));
 
 // Explicitly handle robots in middleware. No crawlers please!
-app.use(function (req, res, next) {
-    if ('/robots.txt' == req.url) {
-        res.type('text/plain')
-        res.send("User-agent: *\nDisallow: /");
-    } else {
-        next();
-    }
+app.use('/robots.txt', function(req, res, next) {
+	res.type('text/plain')
+	res.send("User-agent: *\nDisallow: /");
 });
 
 // Static serve everything from the public directory
