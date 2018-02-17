@@ -32,10 +32,22 @@ app.use(sassMiddleware({
 	indentedSyntax: true, // true = .sass and false = .scss
 	sourceMap: true
 }));
+
+// Explicitly handle robots in middleware. No crawlers please!
+app.use(function (req, res, next) {
+    if ('/robots.txt' == req.url) {
+        res.type('text/plain')
+        res.send("User-agent: *\nDisallow: /");
+    } else {
+        next();
+    }
+});
+
+// Static serve everything from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// routing
+// App routing
 app.use('/', index);
 app.use('/users', users);
 
