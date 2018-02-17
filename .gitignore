@@ -30,4 +30,5 @@ node_modules
 npm-debug.log
 
 # Compiled SASS
-public/stylesheets/*
+public/stylesheets/*.css
+public/stylesheets/*.css.map
