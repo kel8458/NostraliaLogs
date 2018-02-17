@@ -22,3 +22,7 @@ module.exports = {
   // }
 
 };
+
+module.exports.session = {
+  secret: "d3a3e7ca86b5482498d9b05f2d7144b5"
+};
