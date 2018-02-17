@@ -1,0 +1,12 @@
+{
+  "development": {
+    "username": "nostralialogs",
+    "password": "nostralialogs",
+    "database": "nostralia_chars",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "define": {
+        "timestamps": false
+    }
+  }
+}

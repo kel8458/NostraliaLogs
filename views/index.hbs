@@ -1,2 +1,69 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+
+<div>
+  <h2>area_template</h2>
+  <h5>{{area_templates.length}} entries</h5>
+  <table>
+    <tr>
+      <th>
+        Entry
+      </th>
+      <th>
+        MapId
+      </th>
+      <th>
+        ZoneId
+      </th>
+      <th>
+        ExploreFlag
+      </th>
+      <th>
+        Flags
+      </th>
+      <th>
+        AreaLevel
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Team
+      </th>
+      <th>
+        LiquidTypeId
+      </th>
+    </tr>
+    {{#each area_templates}}
+    <tr>
+      <td>
+        {{Entry}}
+      </td>
+      <td>
+        {{MapId}}
+      </td>
+      <td>
+        {{ZoneId}}
+      </td>
+      <td>
+        {{ExploreFlag}}
+      </td>
+      <td>
+        {{Flags}}
+      </td>
+      <td>
+        {{AreaLevel}}
+      </td>
+      <td>
+        {{Name}}
+      </td>
+      <td>
+        {{Team}}
+      </td>
+      <td>
+        {{LiquidTypeId}}
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+</div>
