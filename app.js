@@ -31,6 +31,9 @@ app.use(sassMiddleware({
 	sourceMap: true
 }));
 
+// Set favicon handler
+app.use('/favicon.ico', express.static('public/favicon.ico'));
+
 // Explicitly handle robots in middleware. No crawlers please!
 app.use('/robots.txt', function(req, res, next) {
 	res.type('text/plain')
