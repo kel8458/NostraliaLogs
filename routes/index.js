@@ -8,7 +8,7 @@ const { guildDto, guildListDto } = require('../dto/chars/guildDto');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   charsContext.guild.findAll({
-    order: sequelize.col('name')
+    order: sequelize.col('guildid')
   }).then(function(guilds) {
     var _guildListDto = new guildListDto(guilds);
 

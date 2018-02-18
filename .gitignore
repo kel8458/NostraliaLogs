@@ -30,8 +30,8 @@ node_modules
 npm-debug.log
 
 # Compiled SASS
-public/stylesheets/*.css
-public/stylesheets/*.css.map
+public/stylesheets/**/*.css
+public/stylesheets/**/*.css.map
 
 # DB config files
 db/models/*/.config.json

@@ -1,6 +1,7 @@
 const { BaseDTO, BaseListDTO, fields } = require('dtox');
 
 const guildDto_MAP = {
+  guildid: fields.number(),
   name: fields.string()
 };
 
