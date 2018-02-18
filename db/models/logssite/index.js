@@ -13,7 +13,7 @@ if (config.use_env_variable) {
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
-console.log('Loading chars models');
+console.log('Loading world models');
 fs
   .readdirSync(__dirname)
   .filter(file => {

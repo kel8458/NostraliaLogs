@@ -4,7 +4,8 @@ module.exports = function(sequelize, DataTypes) {
   return sequelize.define('raidstats_evade', {
     id: {
       type: DataTypes.INTEGER(11),
-      allowNull: true
+      allowNull: true,
+      primaryKey: true
     },
     raidId: {
       type: DataTypes.INTEGER(11),

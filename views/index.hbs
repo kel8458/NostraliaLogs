@@ -2,66 +2,18 @@
 <p>Welcome to {{title}}</p>
 
 <div>
-  <h2>area_template</h2>
-  <h5>{{area_templates.length}} entries</h5>
+  <h2>Guilds</h2>
+  <h5>{{guilds.items.length}} entries</h5>
   <table>
     <tr>
       <th>
-        Entry
-      </th>
-      <th>
-        MapId
-      </th>
-      <th>
-        ZoneId
-      </th>
-      <th>
-        ExploreFlag
-      </th>
-      <th>
-        Flags
-      </th>
-      <th>
-        AreaLevel
-      </th>
-      <th>
         Name
       </th>
-      <th>
-        Team
-      </th>
-      <th>
-        LiquidTypeId
-      </th>
     </tr>
-    {{#each area_templates}}
+    {{#each guilds.items}}
     <tr>
       <td>
-        {{Entry}}
-      </td>
-      <td>
-        {{MapId}}
-      </td>
-      <td>
-        {{ZoneId}}
-      </td>
-      <td>
-        {{ExploreFlag}}
-      </td>
-      <td>
-        {{Flags}}
-      </td>
-      <td>
-        {{AreaLevel}}
-      </td>
-      <td>
-        {{Name}}
-      </td>
-      <td>
-        {{Team}}
-      </td>
-      <td>
-        {{LiquidTypeId}}
+        {{name}}
       </td>
     </tr>
     {{/each}}

@@ -2,7 +2,8 @@
 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('bugreports', {
-    id: {
+    _id: {
+      field: 'id',
       type: DataTypes.INTEGER(11),
       allowNull: false
     },

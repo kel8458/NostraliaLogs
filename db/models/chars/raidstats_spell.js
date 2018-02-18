@@ -4,7 +4,8 @@ module.exports = function(sequelize, DataTypes) {
   return sequelize.define('raidstats_spell', {
     id: {
       type: DataTypes.INTEGER(11),
-      allowNull: true
+      allowNull: true,
+      primaryKey: true
     },
     timestamp: {
       type: DataTypes.DATE,

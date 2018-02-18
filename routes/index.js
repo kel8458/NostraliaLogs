@@ -1,15 +1,20 @@
-var world  = require('../db/models/world');
 var express = require('express');
+var sequelize = require('sequelize');
 var router = express.Router();
+
+var charsContext  = require('../db/models/chars');
+const { guildDto, guildListDto } = require('../dto/chars/guildDto');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  world.area_template.findAll({
+  charsContext.guild.findAll({
+    order: sequelize.col('name')
+  }).then(function(guilds) {
+    var _guildListDto = new guildListDto(guilds);
 
-  }).then(function(area_templates) {
     res.render('index', {
       title: 'Nostralia Logs',
-      area_templates: area_templates
+      guilds: _guildListDto
     });
   });
 });
