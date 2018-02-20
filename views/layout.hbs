@@ -2,20 +2,76 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{title}}</title>
 
 	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico?v=2' />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-	<link rel="stylesheet" href="/stylesheets/font-awesome/fontawesome.css" />
-	<link rel="stylesheet" href="/stylesheets/font-awesome/fa-light.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/bulmaswatch/superhero/bulmaswatch.min.css">
+
+	<script defer src="/javascripts/font-awesome/fontawesome-all.min.js"></script>
 
 	<link rel="stylesheet" href="/stylesheets/global.css" />
 </head>
 
 <body>
-	{{{body}}}
+	<header>
+		<nav class="navbar" role="navigation" aria-label="main navigation">
+			<div class="container">
+				<div class="navbar-brand">
+					<a class="navbar-item" href="/">
+            <img src="/images/logo.png" alt="Nostralia Logs" /> Nostralia Logs
+          </a>
+				</div>
+				<div class="navbar-menu">
+					<div class="navbar-start">
+						<a class="navbar-item" href="#">Raids</a>
+						<a class="navbar-item" href="#">Dungeons</a>
+						<a class="navbar-item" href="#">World</a>
+						<a class="navbar-item" href="#">Battlegrounds</a>
+						<a class="navbar-item" href="#">Guilds</a>
+					</div>
+					<div class="navbar-end">
+						<a class="navbar-item" href="#">
+              <i class="far fa-sign-in"></i> Log in
+            </a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section class="section">
+		<div class="container">
+			<div class="columns">
+				<div class="column is-one-third">
+					<aside class="menu">
+						<p class="menu-label">
+							Raids
+						</p>
+						<ul class="menu-list">
+							<li><a>Molten Core</a></li>
+							<li><a>Blackwing Lair</a></li>
+							<li><a>Ahn'Qiraj</a></li>
+							<li><a>Naxxramas</a></li>
+						</ul>
+						<p class="menu-label">
+							Dungeons
+						</p>
+						<p class="menu-label">
+							World
+						</p>
+						<p class="menu-label">
+							Battlegrounds
+						</p>
+					</aside>
+				</div>
+				<div class="column">
+					{{{body}}}
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
 
 </html>

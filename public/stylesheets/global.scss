@@ -1,1 +1,29 @@
+body,
+html {
+	font-size: 14px;
+}
 
+a {
+	.svg-inline--fa,
+	i {
+		margin-right: 5px;
+	}
+}
+
+.navbar {
+	.navbar-item {
+		&.navbar-item.is-active,
+		&.navbar-item:hover {
+      background-color: rgba(31, 45, 59, 0.58);
+      color: #dee5ed;
+    }
+	}
+
+	.navbar-brand {
+		font-size: 18px;
+
+		img {
+			margin-right: 7px;
+		}
+	}
+}

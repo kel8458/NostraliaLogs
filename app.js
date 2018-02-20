@@ -41,7 +41,7 @@ app.use('/robots.txt', function(req, res, next) {
 });
 
 // Static serve everything from the public directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use("/", express.static(path.resolve(__dirname, 'public')));
 
 
 // App routing

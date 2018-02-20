@@ -1,35 +1,27 @@
-<section class="section">
-	<div class="container">
-		<h1 class="title">
-      Nostralia Logs
-    </h1>
-
-		<div>
-			<h2 class="subtitle">Guilds</h2>
-			<table class="table">
-				<thead>
-					<tr>
-            <th>
-              ID
-            </th>
-						<th>
-							Name
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					{{#each guilds.items}}
-						<tr>
-							<td>
-								{{guildid}}
-							</td>
-							<td>
-								{{name}}
-							</td>
-						</tr>
-					{{/each}}
-				</tbody>
-			</table>
-		</div>
-	</div>
-</section>
+<div>
+	<h2 class="subtitle">Guilds</h2>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>
+					ID
+				</th>
+				<th>
+					Name
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each guilds.items}}
+				<tr>
+					<td>
+						{{guildid}}
+					</td>
+					<td>
+						{{name}}
+					</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>
